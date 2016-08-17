@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ad Test</title>
+</head>
+<body>
+
+	<script type='text/javascript'>
+		var gptadslots=[];
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function(){ var gads = document.createElement('script');
+		gads.async = true; gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
+	<script> console.log('called gpt'); </script>
+
+	<script>
+		googletag.cmd.push(function() {
+			gptadslots[1]= googletag.defineSlot('/43459271/loc-desktop/wwtv/web/homepage_0__container__', [728,90],'Top').addService(googletag.pubads());
+		googletag.pubads().enableAsyncRendering();
+		googletag.enableServices();
+		});
+	</script>
+
+	<div id="Top" style='width:728px; height:90px;'>
+		<script type='text/javascript'>
+		  googletag.cmd.push(function() {
+		    googletag.display('Top');
+		  });
+		</script>
+	</div>
+
+</body>
+</html>
