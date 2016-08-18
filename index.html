@@ -18,17 +18,24 @@
 		node.parentNode.insertBefore(gads, node);
 		})();
 	</script>
-	<script> console.log('called gpt'); </script>
 
 	<script>
 		googletag.cmd.push(function() {
-			gptadslots[1]= googletag.defineSlot('/43459271/loc-desktop/wwtv/web/homepage_0__container__', [728,90],'Top').addService(googletag.pubads());
+			// Google GPT Mapping
+			var leaderboard_mapping = googletag.sizeMapping().
+				addSize([1280, 800], [[728,90],[970,90],[970,250]]).
+				addSize([600,800], [[468,60],[300,600]]).
+				build();
+
+			gptadslots[1]= googletag.defineSlot('/43459271/loc-desktop/frankly/web/homepage_0__container__', [[728,90]],'Top').
+			defineSizeMapping(leaderboard_mapping).
+			addService(googletag.pubads());
 		googletag.pubads().enableAsyncRendering();
 		googletag.enableServices();
 		});
 	</script>
 
-	<div id="Top" style='width:728px; height:90px;'>
+	<div id="Top">
 		<script type='text/javascript'>
 		  googletag.cmd.push(function() {
 		    googletag.display('Top');
